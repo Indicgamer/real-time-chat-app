@@ -22,7 +22,7 @@ app.use(express.json({limit: "50mb"}));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*",
+    origin: "http://16.170.243.62:3000",
     credentials: true,
   })
 );
