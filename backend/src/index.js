@@ -22,7 +22,7 @@ app.use(express.json({limit: "50mb"}));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://16.170.243.62:3000", "http://16.170.243.62"],
+    origin: "*",
     credentials: true,
   })
 );
@@ -83,7 +83,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 
-server.listen(PORT, () => {
+server.listen(PORT,"0.0.0.0", () => {
   console.log("server is running on PORT:" + PORT);
   connectDB();
 });
